@@ -70,7 +70,7 @@ const cartGenerate = () => {
         `
         <div class="flex flex-col items-center justify-center">
         <p>Cart is empty</p>
-        <a href="home.html"> <button  class=" bg-black text-white rounded-2xl px-5">go Back to Home </button></a>
+        <a href="index.html"> <button  class=" bg-black text-white rounded-2xl px-5">go Back to Home </button></a>
         
         </div>`;
     }
@@ -108,9 +108,11 @@ function decrement(id){
 
         return;
 
-    }else if(search.item===0){
+    }
+    else if(search.item===0){
         let pack=document.getElementById(`pack-${id}`);
-        pack.remove()
+        pack.remove();
+        location.reload(true)
     }
     else{
         search.item -= 1
